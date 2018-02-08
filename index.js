@@ -62,7 +62,7 @@ class CheckboxForm extends Component {
   }
 
   renderCheckItem(item, i) {
-    const { itemShowKey, itemCheckedKey, iconSize, iconColor } = this.props;
+    const { itemShowKey, itemCheckedKey, iconSize, iconColor, labelStyle } = this.props;
     const isChecked = item[itemCheckedKey] || false;
 
     return (
@@ -82,11 +82,7 @@ class CheckboxForm extends Component {
             size={iconSize}
             color={iconColor}
           />
-          <View
-            style={{ marginLeft: 5 }}
-          >
-            <Text style={this.props.labelStyle}>{'' + item[itemShowKey]}</Text>
-          </View>
+          <Text style={[{ marginLeft: 5 }, labelStyle]}>{'' + item[itemShowKey]}</Text>
         </View>
       </TouchableWithoutFeedback>
     );
