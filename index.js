@@ -85,7 +85,7 @@ class CheckboxForm extends Component {
           <View
             style={{ marginLeft: 5 }}
           >
-            <Text>{'' + item[itemShowKey]}</Text>
+            <Text style={this.props.labelStyle}>{'' + item[itemShowKey]}</Text>
           </View>
         </View>
       </TouchableWithoutFeedback>
